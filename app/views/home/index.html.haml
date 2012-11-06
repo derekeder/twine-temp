@@ -1,2 +1,15 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+%h2 Twine temperature readings at 1871
+
+%table.table.table-bordered
+  %thead
+    %tr
+      %th Temperature
+      %th When
+  %tbody
+    - @temperature_readings.each do |temp|
+      %tr
+        %td
+          =temp[:temperature]
+          &deg;F
+        %td
+          =temp[:created_at].to_s(:long)

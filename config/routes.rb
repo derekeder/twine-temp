@@ -1,6 +1,6 @@
 TwineTemp::Application.routes.draw do
 
-  resources :temperature_reading
+  get 'temperature_reading/' => 'temperature_reading#record_temp'
 
   root :to => 'home#index'
 end
